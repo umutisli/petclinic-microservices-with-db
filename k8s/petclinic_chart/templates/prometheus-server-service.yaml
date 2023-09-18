@@ -4,12 +4,11 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.yml -o petclinic_chart/templates
     kompose.image-pull-secret: regcred
-    kompose.version: 1.30.0 (9d8dcb518)
+    kompose.version: 1.28.0 (c4137012e)
   creationTimestamp: null
   labels:
     io.kompose.service: prometheus-server
   name: prometheus-server
-  namespace: default
 spec:
   ports:
     - name: "9091"

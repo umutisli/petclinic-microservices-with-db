@@ -3,12 +3,11 @@ kind: Deployment
 metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.yml -o petclinic_chart/templates
-    kompose.version: 1.30.0 (9d8dcb518)
+    kompose.version: 1.28.0 (c4137012e)
   creationTimestamp: null
   labels:
     io.kompose.service: mysql-server
   name: mysql-server
-  namespace: default
 spec:
   replicas: 1
   selector:
@@ -19,7 +18,7 @@ spec:
     metadata:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.yml -o petclinic_chart/templates
-        kompose.version: 1.30.0 (9d8dcb518)
+        kompose.version: 1.28.0 (c4137012e)
       creationTimestamp: null
       labels:
         io.kompose.network/k8s-default: "true"
@@ -35,8 +34,6 @@ spec:
           name: mysql-server
           ports:
             - containerPort: 3306
-              hostPort: 3306
-              protocol: TCP
           resources: {}
       restartPolicy: Always
 status: {}
